@@ -13,7 +13,7 @@ before_build:
 build:
   project: Wox.sln
 after_build:
-- ps: nunit3-console $env:APPVEYOR_BUILD_FOLDER\Output\Release\Wox.Test.dll  --output=log.txt --result=myresults.xml;format=AppVeyor
+- ps: nunit3-console "Output\Release\Wox.Test.dll"  --output="log.txt" "--result=myresults.xml;format=AppVeyor"
 artifacts:
 - path: 'Output\Packages\Wox-*.zip'
   name: zipped_binary
