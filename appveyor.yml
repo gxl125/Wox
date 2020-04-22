@@ -27,6 +27,8 @@ artifacts:
   name: installer
 - path: 'log.txt'
   name: log
+- path: 'myresults.xml'
+  name: log
 deploy:
   provider: NuGet
   api_key:
