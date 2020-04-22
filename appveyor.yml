@@ -12,7 +12,8 @@ before_build:
 - ps: nuget restore
 build:
   project: Wox.sln
-after_test:
+after_build:
+- ps: nunit3-console $env:APPVEYOR_BUILD_FOLDER\Output\Release\Wox.Test.dll  --output=log.txt --result=myresults.xml;format=AppVeyor
 artifacts:
 - path: 'Output\Packages\Wox-*.zip'
   name: zipped_binary
@@ -24,7 +25,7 @@ artifacts:
   name: installer
 - path: 'Output\Packages\RELEASES'
   name: installer
-- path: '%APPDATA%\Wox\Logs\*\*.txt'
+- path: 'log.txt'
   name: log
 deploy:
   provider: NuGet
