@@ -54,6 +54,7 @@
     <Compile Include="QueryBuilderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UrlPluginTest.cs" />
+    <Compile Include="XunitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Plugins\Wox.Plugin.Url\Wox.Plugin.Url.csproj">
@@ -86,6 +87,14 @@
     </PackageReference>
     <PackageReference Include="NUnit3TestAdapter">
       <Version>3.16.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="xunit">
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio">
+      <Version>2.4.1</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
