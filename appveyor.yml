@@ -24,6 +24,8 @@ artifacts:
   name: installer
 - path: 'Output\Packages\RELEASES'
   name: installer
+- path: '%APPDATA%\Wox\Logs\*\*.txt'
+  name: log
 deploy:
   provider: NuGet
   api_key:
